@@ -87,14 +87,14 @@
 > min/max length
 > keyword
 >> 영어의 경우 전처리 및 토큰화 후 LDA 분석 수행. 초기에는 LSA로 키워드 추출을 진행하였으나 LDA가 성능이 더 우수하여 알고리즘을 교체하였다.
->> ![](./iamge/Text Alg Comparion/2.PNG)
->> ![](./iamge/Text Alg Comparion/3.PNG)
->> ![](./iamge/Text Alg Comparion/4.PNG)
->> ![](./iamge/Text Alg Comparion/5.PNG)
->> ![](./iamge/Text Alg Comparion/6.PNG)
->> ![](./iamge/Text Alg Comparion/7.PNG)
->> ![](./iamge/Text Alg Comparion/8.PNG)
->> ![](./iamge/Text Alg Comparion/9.PNG)
+![](./iamge/TextAlgComparion/2.PNG)
+![](./iamge/TextAlgComparion/3.PNG)
+![](./iamge/TextAlgComparion/4.PNG)
+![](./iamge/TextAlgComparion/5.PNG)
+![](./iamge/TextAlgComparion/6.PNG)
+![](./iamge/TextAlgComparion/7.PNG)
+![](./iamge/TextAlgComparion/8.PNG)
+![](./iamge/TextAlgComparion/9.PNG)
 >> 한국어의 경우 형태소 분석을 통해 명사만 추출한 후 키워드 추출 수행. Konlpy의 Komoran과 soynlpy 라이브러리 비교 중.
 
 
@@ -110,8 +110,9 @@
 > 논문에서 R[X]가 FK table이고 S[Y]가 PK table일 때 둘 사이에 IND가 성립할 때 이를 from R[X] -> to S[Y]라 나타냄
 
 ## Update
-> csv 파일을 사용자가 추가하는 것은 문제가 되지 않았으나 DB에서 직접 데이터 업데이트가 발생하는 경우(업데이트에는 삭제, 추가 등 모든 변경사항이 포함된다) 이를 알아내는 것이 관건이었다.
-> 다음과 같이 mysql의 **쿼리로그**를 긁어오는 방법을 제안하였고, DB관련 업데이트 사항에 대해서는 현재 이 방법을 사용하고 있다. 
+#### csv 파일을 사용자가 추가하는 것은 문제가 되지 않았으나 DB에서 직접 데이터 업데이트가 발생하는 경우(업데이트에는 삭제, 추가 등 모든 변경사항이 포함된다) 이를 알아내는 것이 관건이었다.
+
+#### 다음과 같이 mysql의 **쿼리로그**를 긁어오는 방법을 제안하였고, DB관련 업데이트 사항에 대해서는 현재 이 방법을 사용하고 있다. 
 ![Query Log 사용방식 제안](./image/QueryLog/1.png)
 ![](./image/QueryLog/2.png)
 ![](./image/QueryLog/3.png)
@@ -126,8 +127,8 @@
 
 ## UI
 ### 초기 디자인
-![](./image/UI Design/1.jpg)
-![](./image/UI Design/2.jpg)
+![](./image/UIDesign/1.jpg)
+![](./image/UIDesign/2.jpg)
 
 
 ### **[중간보고서 및 발표영상](https://github.com/nsa32752/2020-2/tree/main/Capstone1)**
