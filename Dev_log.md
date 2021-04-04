@@ -58,6 +58,9 @@
 	- make graphdb
 ```
 
+# System Structure
+![](./image/systemstructure.png)
+
 # Dev log
 
 ## Cleanliness
