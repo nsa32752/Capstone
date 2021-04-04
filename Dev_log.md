@@ -92,14 +92,14 @@
 >> 영어의 경우 전처리 및 토큰화 후 LDA 분석 수행.
 >> 
 >> 초기에는 LSA로 키워드 추출을 진행하였으나 LDA가 성능이 더 우수하여 알고리즘을 교체하였다.
-![](./image/TextAlgComparison/2.PNG)
-![](./image/TextAlgComparison/3.PNG)
-![](./image/TextAlgComparison/4.PNG)
-![](./image/TextAlgComparison/5.PNG)
-![](./image/TextAlgComparison/6.PNG)
-![](./image/TextAlgComparison/7.PNG)
-![](./image/TextAlgComparison/8.PNG)
-![](./image/TextAlgComparison/9.PNG)
+### ![](./image/TextAlgComparison/2.PNG)
+### ![](./image/TextAlgComparison/3.PNG)
+### ![](./image/TextAlgComparison/4.PNG)
+### ![](./image/TextAlgComparison/5.PNG)
+### ![](./image/TextAlgComparison/6.PNG)
+### ![](./image/TextAlgComparison/7.PNG)
+### ![](./image/TextAlgComparison/8.PNG)
+### ![](./image/TextAlgComparison/9.PNG)
 >> 한국어의 경우 형태소 분석을 통해 명사만 추출한 후 키워드 추출 수행. Konlpy의 Komoran과 soynlpy 라이브러리 비교 중.
 
 
