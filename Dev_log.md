@@ -8,10 +8,10 @@
 #### (칼럼간 교집합)/(FK 테이블의 칼럼 집합-중복 제거) == 1일 경우 PK에서 FK로의 IND가 성립
 ## GraphDB: Arango db
 #### 파이썬 라이브러리 존재, 코드 공개 필요없는 라이센스.
-> * 네오포제이는 라이센스(bsd||apache||mit만 가능) 때문에 탈락, orient db는 디비 연결이 안되는 에러가 발생하여 진행 불가
+> 네오포제이는 라이센스(bsd||apache||mit만 가능) 때문에 탈락, orient db는 디비 연결이 안되는 에러가 발생하여 진행 불가
 
 ## 함수 설계
-> ** 코딩 컨벤션: 스네이크 표기법 **
+> 코딩 컨벤션: 스네이크 표기법
 ```python
 1. Make DataBase & Polystore
 	A. Function makedb(char db, char file_name)
@@ -62,6 +62,7 @@
 
 ## Cleanliness
 > 데이터 베이스에서 데이터 셋에 대해 페이징 작업을 수행.
+> 
 > 클리니스를 수행 후 프로파일링에 데이터를 데이터프레임 형태로 넘겨줌
 1. 수치형 데이터
 > SQL문으로 IQR 계산 후 outlier 제거
@@ -71,6 +72,7 @@
 
 ## Profiling
 > 페이징 작업을 거치기 때문에 증분 프로파일링 진행
+> 
 > **증분 프로파일링**은 데이터 셋을 한번에 읽어올 경우에 발생할 수 있는 **메모리 초과를 방지**하기 위해 수행
 ![증분 프로파일링 설계](./image/incremental/1.png)
 ### 메타 데이터 항목
@@ -85,8 +87,11 @@
 > min/max length, distinct value와 개수
 - 텍스트
 > min/max length
+> 
 > keyword
->> 영어의 경우 전처리 및 토큰화 후 LDA 분석 수행. 초기에는 LSA로 키워드 추출을 진행하였으나 LDA가 성능이 더 우수하여 알고리즘을 교체하였다.
+>> 영어의 경우 전처리 및 토큰화 후 LDA 분석 수행.
+>> 
+>> 초기에는 LSA로 키워드 추출을 진행하였으나 LDA가 성능이 더 우수하여 알고리즘을 교체하였다.
 ![](./iamge/TextAlgComparion/2.PNG)
 ![](./iamge/TextAlgComparion/3.PNG)
 ![](./iamge/TextAlgComparion/4.PNG)
@@ -123,7 +128,7 @@
 #### 파이썬과 달리 자바 라이브러리에서는 이러한 과정 없이 생성하는 것이 가능하였다. 그래서 그래프 생성을 자바로 연동해서 시행하였다.그래프 생성까지는 성공하였으나 이를 사용자에게 어떻게 보여줄것인지가 의문이였다. UI를 개발하기로 결정하기 전, 그래프를 이미지로 제공하기로 결정했고, Graphviz를 사용하였다.
 ![](./image/Graphviz_example.png)
 ### Graphviz에서 그래프 생성을 위해 사용되는 데이터는 relation에서 AQL을 사용하여 가져온 json 형식의 데이터였기 때문에 자바를 사용하여 ArangoDB에서 그래프를 생성하는 과정은 삭제하게 되었다. 후에, UI 개발을 하면서 이미지 형태인 graphviz대신 networkx를 사용하여 그래프를 가공하였고, 데모는 다음과 같다.
-[demo](./image/networkx%20demo.mp4)
+### [demo](./image/networkx%20demo.mp4)
 
 ## UI
 ### 초기 디자인
