@@ -107,15 +107,15 @@
 ### pyArango 라이브러리를 사용하여 ArangoDB에 각 데이터 셋의 메타데이터 collection(table)과 relation을 생성하였다. relation을 가지고 그래프를 생성할 경우 DB에서 직접 생성하거나 각 collection과 relation 명을 클래스 명으로 가지는 파이썬 클래스를 생성해야했다. Collection명과 relation명을 변수로 받아오기 때문에 각 이름을 클래스 명으로 가지는 클래스를 생성하는 것이 불가능하였다. 이를 해결하고자 다음과 같은 이슈도 올렸으나 해답을 얻지 못하였다.
 [ArangoDB-Community][https://github.com/ArangoDB-Community/pyArango/issues/191] 
 ### 파이썬과 달리 자바 라이브러리에서는 이러한 과정 없이 생성하는 것이 가능하였다. 그래서 그래프 생성을 자바로 연동해서 시행하였다.그래프 생성까지는 성공하였으나 이를 사용자에게 어떻게 보여줄것인지가 의문이였다. UI를 개발하기로 결정하기 전, 그래프를 이미지로 제공하기로 결정했고, Graphviz를 사용하였다.
-!(./image/Graphviz_example.png)
+![](./image/Graphviz_example.png)
 ### Graphviz에서 그래프 생성을 위해 사용되는 데이터는 relation에서 AQL을 사용하여 가져온 json 형식의 데이터였기 때문에 자바를 사용하여 ArangoDB에서 그래프를 생성하는 과정은 삭제하게 되었다. 후에, UI 개발을 하면서 이미지 형태인 graphviz대신 networkx를 사용하여 그래프를 가공하였고, 데모는 다음과 같다.
 [demo][./image/networkx%20demo.mp4]
 
 ## UI
 ### 초기 디자인
-!(./image/UI Design/1.jpg)
-!(./image/UI Design/2.jpg)
+![](./image/UI Design/1.jpg)
+![](./image/UI Design/2.jpg)
 
 
-**[중간보고서 및 발표영상][https://github.com/nsa32752/2020-2/tree/main/Capstone1]**
-**[회의록][https://github.com/nsa32752/Capstone/edit/master/%ED%9A%8C%EC%9D%98%EB%A1%9D.txt]**
+### **[중간보고서 및 발표영상][https://github.com/nsa32752/2020-2/tree/main/Capstone1]**
+### **[회의록][https://github.com/nsa32752/Capstone/edit/master/%ED%9A%8C%EC%9D%98%EB%A1%9D.txt]**
