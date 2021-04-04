@@ -92,14 +92,14 @@
 >> 영어의 경우 전처리 및 토큰화 후 LDA 분석 수행.
 >> 
 >> 초기에는 LSA로 키워드 추출을 진행하였으나 LDA가 성능이 더 우수하여 알고리즘을 교체하였다.
-![](./iamge/TextAlgComparion/2.PNG)
-![](./iamge/TextAlgComparion/3.PNG)
-![](./iamge/TextAlgComparion/4.PNG)
-![](./iamge/TextAlgComparion/5.PNG)
-![](./iamge/TextAlgComparion/6.PNG)
-![](./iamge/TextAlgComparion/7.PNG)
-![](./iamge/TextAlgComparion/8.PNG)
-![](./iamge/TextAlgComparion/9.PNG)
+![](./image/TextAlgComparion/2.PNG)
+![](./image/TextAlgComparion/3.PNG)
+![](./image/TextAlgComparion/4.PNG)
+![](./image/TextAlgComparion/5.PNG)
+![](./image/TextAlgComparion/6.PNG)
+![](./image/TextAlgComparion/7.PNG)
+![](./image/TextAlgComparion/8.PNG)
+![](./image/TextAlgComparion/9.PNG)
 >> 한국어의 경우 형태소 분석을 통해 명사만 추출한 후 키워드 추출 수행. Konlpy의 Komoran과 soynlpy 라이브러리 비교 중.
 
 
@@ -135,6 +135,3 @@
 ![](./image/UIDesign/1.jpg)
 ![](./image/UIDesign/2.jpg)
 
-
-### **[중간보고서 및 발표영상](https://github.com/nsa32752/2020-2/tree/main/Capstone1)**
-### **[회의록](https://github.com/nsa32752/Capstone/edit/master/%ED%9A%8C%EC%9D%98%EB%A1%9D.txt)**
