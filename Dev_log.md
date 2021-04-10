@@ -11,7 +11,6 @@
 > 네오포제이는 라이센스(bsd||apache||mit만 가능) 때문에 탈락, orient db는 디비 연결이 안되는 에러가 발생하여 진행 불가
 
 ## 함수 설계
-> 코딩 컨벤션: 스네이크 표기법
 ```python
 1. Make DataBase & Polystore
 	A. Function makedb(char db, char file_name)
