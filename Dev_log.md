@@ -77,6 +77,10 @@
 > 
 > **증분 프로파일링**은 데이터 셋을 한번에 읽어올 경우에 발생할 수 있는 **메모리 초과를 방지**하기 위해 수행
 ### ![증분 프로파일링 설계](./image/incremental/1.png)
+> 초기에 pandas_profiling 라이브러리를 사용하여 증분 프로파일링을 진행하였다.
+> 메타 데이터에 평균, 최대/최솟값 등이 포함되기 때문에 pandas profiling을 사용하지 않고 증분 프로파일링 과정에서 distinct value와 그 개수에 대해서만 증분을 수행하기로 하였고, 증분이 끝난 후 나머지 필요한 메타 데이터를 구하기로 결정하였다.
+> 
+> pandas_profiling을 사용하지 않음으로써, 프로파일링 수행 시간이 많이 축소 되었다.
 ### 메타 데이터 항목
 #### 1. 테이블
 > 전체 row의 수
@@ -84,7 +88,7 @@
 > 칼럼명
 #### 2. 칼럼
 - 수치형
-> mean, min/max, range, distinct value와 개수
+> mean, min/max, range, std, distinct value와 개수
 - 범주형
 > min/max length, distinct value와 개수
 - 텍스트
@@ -93,7 +97,7 @@
 > keyword
 >> 영어의 경우 전처리 및 토큰화 후 LDA 분석 수행.
 >> 
->> 초기에는 LSA로 키워드 추출을 진행하였으나 LDA가 성능이 더 우수하여 알고리즘을 교체하였다.
+>>
 ### ![](./image/TextAlgComparison/2.PNG)
 ### ![](./image/TextAlgComparison/3.PNG)
 ### ![](./image/TextAlgComparison/4.PNG)
@@ -102,8 +106,13 @@
 ### ![](./image/TextAlgComparison/7.PNG)
 ### ![](./image/TextAlgComparison/8.PNG)
 ### ![](./image/TextAlgComparison/9.PNG)
->> 한국어의 경우 형태소 분석을 통해 명사만 추출한 후 키워드 추출 수행. Konlpy의 Komoran과 soynlpy 라이브러리 비교 중.
-
+>> 초기에는 LSA로 키워드 추출을 진행하였으나 LDA가 성능이 더 우수하여 알고리즘을 교체하였다.
+### ![](./image/TextAlgComparison/10.PNG)
+### ![](./image/TextAlgComparison/11.PNG)
+### ![](./image/TextAlgComparison/12.PNG)
+### ![](./image/TextAlgComparison/13.PNG)
+>> 영어는 두글자 이하의 단어(is,to,of...)를 불용어로 보고 제거해도 상관이 없었지만, 한국어의 경우 1음절 단어에서도 의미가 있는 단어(꿈,강...)가 있었다. 그래서 형태소 분석기를 사용해 명사를 추출하기로 하였다. 추출된 명사들 중에서도 불용어를 제거해야했고, 1음절의 경우 의미를 가진 단어의 수가 많지 않아 직접 제거하기로 결정하였다.
+>> Konlpy의 Komoran과 soynlp 라이브러리 비교를 통하여 soynlp의 NewNounExtractor 라이브러리를 채택하였다.
 
 ### 유사도 계산
 1. 수치형/범주형 데이터
@@ -136,4 +145,5 @@
 ### 초기 디자인
 ![](./image/UIDesign/1.jpg)
 ![](./image/UIDesign/2.jpg)
+![UI 일부 개발 데모](https://youtu.be/G7U61eM_KIM)
 
