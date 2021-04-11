@@ -138,12 +138,13 @@
 [ArangoDB-Community](https://github.com/ArangoDB-Community/pyArango/issues/191)
 #### 파이썬과 달리 자바 라이브러리에서는 이러한 과정 없이 생성하는 것이 가능하였다. 그래서 그래프 생성을 자바로 연동해서 시행하였다.그래프 생성까지는 성공하였으나 이를 사용자에게 어떻게 보여줄것인지가 의문이였다. UI를 개발하기로 결정하기 전, 그래프를 이미지로 제공하기로 결정했고, Graphviz를 사용하였다.
 ![](./image/Graphviz_example.png)
-### Graphviz에서 그래프 생성을 위해 사용되는 데이터는 relation에서 AQL을 사용하여 가져온 json 형식의 데이터였기 때문에 자바를 사용하여 ArangoDB에서 그래프를 생성하는 과정은 삭제하게 되었다. 후에, UI 개발을 하면서 이미지 형태인 graphviz대신 networkx를 사용하여 그래프를 가공하였고, 데모는 다음과 같다.
+### Graphviz에서 그래프 생성을 위해 사용되는 데이터는 relation에서 AQL을 사용하여 가져온 json 형식의 데이터였기 때문에 자바를 사용하여 ArangoDB에서 그래프를 생성하는 과정은 삭제하게 되었다. 후에, UI 개발을 하면서 이미지 형태인 graphviz대신 networkx를 사용하여 그래프를 가공하였고, UI 적용 영상은 하단에서 확인할 수 있다.
 ### [demo](./image/networkx%20demo.mp4)
 
 ## UI
-### 초기 디자인
+### 초기 설계도
 ![](./image/UIDesign/1.jpg)
 ![](./image/UIDesign/2.jpg)
-![UI 일부 개발 데모](https://youtu.be/G7U61eM_KIM)
+### 그래프 부분 데모
+[![UI 그래프 부분 데모](https://img.youtube.com/vi/G7U61eM_KIM/0.jpg)](https://youtu.be/G7U61eM_KIM)
 
