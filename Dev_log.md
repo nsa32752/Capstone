@@ -146,6 +146,7 @@
 ![](./image/UIDesign/1.jpg)
 ![](./image/UIDesign/2.jpg)
 ### 그래프 부분 데모
->> 클릭 시 유튜브로 연결
+> 클릭 시 유튜브로 연결
+
 [![UI 그래프 부분 데모](https://img.youtube.com/vi/G7U61eM_KIM/0.jpg)](https://youtu.be/G7U61eM_KIM)
 
