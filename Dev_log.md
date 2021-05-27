@@ -148,5 +148,5 @@
 ### 그래프 부분 데모
 > 클릭 시 유튜브로 연결
 
-[![UI 그래프 부분 데모](https://img.youtube.com/vi/EmH-E06suHc/0.jpg)](https://youtu.be/EmH-E06suHc)
+[![최종 시연 영상](https://img.youtube.com/vi/NOLJZ-h286I/0.jpg)](https://youtu.be/NOLJZ-h286I)
 
