@@ -51,7 +51,7 @@ def main(col_name, dic): #df=calculate_similarity에서 tmp(dict type)
         noun_extractor.train(df[col_name].to_list())
         nouns = noun_extractor.extract()
         n_list = [x[0] for x in nouns.items() if len(x[0])>1]
-        n_list = [x for x in n_list if len(x) > 2 or (len(x) == 1 and x in ko_one_word)]
+        n_list = [x for x in n_list if len(x) >= 2 or (len(x) == 1 and x in ko_one_word)]
         kor = df[col_name].apply(lambda x: [item for item in n_list if item in x])
 
         eng = df[col_name].str.replace("[^a-zA-Z0-9]", " ")
